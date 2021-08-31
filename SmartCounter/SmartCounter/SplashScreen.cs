@@ -19,6 +19,12 @@ namespace SmartCounter
                 WidthRequest = 150,
                 HeightRequest = 150
             };
+            var lab = new Label();
+            lab.Text = "By Yaccov Gigi";
+            lab.FontSize = 35;
+            
+            lab.HorizontalTextAlignment = TextAlignment.Center;
+            lab.VerticalTextAlignment = TextAlignment.Start;
 
             AbsoluteLayout.SetLayoutFlags(splashImage,
                 AbsoluteLayoutFlags.PositionProportional);
@@ -26,6 +32,8 @@ namespace SmartCounter
                 new Rectangle(0.5, 0.5, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
 
             sub.Children.Add(splashImage);
+            sub.Children.Add(lab);
+            
 
             this.BackgroundColor = Color.FromHex("#E69127");
             this.Content = sub;
