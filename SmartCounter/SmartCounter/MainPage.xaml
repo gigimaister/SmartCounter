@@ -9,6 +9,7 @@
         <Frame.GestureRecognizers>
             <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
             <TapGestureRecognizer Tapped="OnTapped"/>
+            <PinchGestureRecognizer PinchUpdated="OnPinchUpdated" />
         </Frame.GestureRecognizers>
         <Label Text="0" x:Name="LabelCounter" TextColor="white" FontSize="150" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
     </Frame>
