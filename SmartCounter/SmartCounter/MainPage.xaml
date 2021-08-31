@@ -19,9 +19,10 @@
             <PinchGestureRecognizer PinchUpdated="OnPinchUpdated" />
         </StackLayout.GestureRecognizers>
 
-        <Label Text="0" x:Name="LabelCounter" TextColor="white" FontSize="150" 
+        <Label Text="0" x:Name="LabelCounter" TextColor="white" FontSize="100" 
                VerticalTextAlignment="Center" 
-               HorizontalTextAlignment="Center" Margin="150"/>
+               HorizontalTextAlignment="Center"
+               VerticalOptions="FillAndExpand"/>
         
     </StackLayout>
     

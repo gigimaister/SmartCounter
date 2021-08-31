@@ -2,4 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartCounter.Views.Settings">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Back"                 
+                 Order="Primary"
+                 Priority="0" Clicked="OnBackFromSettings_Click"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout BackgroundColor="Black">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Sound" FontSize="25" TextColor="White"
+                   Margin="15,50,0,0"
+                   />
+            <Switch IsToggled="False" Margin="15,50,25,0" 
+                    HorizontalOptions="FillAndExpand" Toggled="switch_Toggled"
+                    OnColor="Green"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     IsVisible="false"
+                     x:Name="SoundCounterIsVisible">
+            <Label Text="After Every" TextColor="White" FontSize="25"
+               Margin="15,50,0,0"/>
+            <Entry Keyboard="Numeric" BackgroundColor="White" 
+                   HorizontalOptions="FillAndExpand" Margin="160,50,50,0" HorizontalTextAlignment="Center"
+                   MaxLength="2"/>
+        </StackLayout>
+        
+    </StackLayout>
 </ContentPage>
