@@ -1,4 +1,5 @@
 ﻿using SmartCounter.Models;
+using SmartCounter.Views;
 using System;
 using Xamarin.Forms;
 
@@ -14,6 +15,7 @@ namespace SmartCounter
             InitializeComponent();
 
             //Elemets
+            StackLayout stackLayout = new StackLayout();
             Frame boxView = new Frame { BackgroundColor = Color.Black};
             SwipeGestureRecognizer leftSwipeGesture = new SwipeGestureRecognizer { Direction = SwipeDirection.Left };
             TapGestureRecognizer tappedGesture = new TapGestureRecognizer();
@@ -23,7 +25,7 @@ namespace SmartCounter
             leftSwipeGesture.Swiped += OnSwiped;
             tappedGesture.Tapped += OnTapped;
 
-            boxView.GestureRecognizers.Add(leftSwipeGesture);
+            stackLayout.GestureRecognizers.Add(leftSwipeGesture);
         }
         #region EVENTS
         private void OnTapped(object sender, EventArgs e)
@@ -42,6 +44,10 @@ namespace SmartCounter
         {
             counter.Count = 0;
             LabelCounter.Text = $"{counter.Count}";
+        }
+        private void OnSettings_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage(new Settings());
         }
         #endregion
     }

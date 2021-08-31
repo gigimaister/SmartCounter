@@ -24,10 +24,10 @@ namespace SmartCounter
             lab.FontSize = 35;
             
             lab.HorizontalTextAlignment = TextAlignment.Center;
-            lab.VerticalTextAlignment = TextAlignment.Start;
+            lab.VerticalTextAlignment = TextAlignment.Center;
 
             AbsoluteLayout.SetLayoutFlags(splashImage,
-                AbsoluteLayoutFlags.PositionProportional);
+                AbsoluteLayoutFlags.PositionProportional);           
             AbsoluteLayout.SetLayoutBounds(splashImage,
                 new Rectangle(0.5, 0.5, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
 
