@@ -22,9 +22,13 @@
             <Label Text="After Every" TextColor="White" FontSize="25"
                Margin="15,50,0,0"/>
             <Entry Keyboard="Numeric" BackgroundColor="White" 
-                   HorizontalOptions="FillAndExpand" Margin="160,50,50,0" HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand" Margin="120,50,50,0" HorizontalTextAlignment="Center"
                    MaxLength="2"/>
         </StackLayout>
+        
+        <Button Margin="100,250,100,0" x:Name="SettingsBtn" Clicked="OnBtnSaveSettings_Clicked" CornerRadius="25" BackgroundColor="DarkSeaGreen"                
+                Text="Save Changes" IsVisible="false"
+                TextTransform="None"/>
         
     </StackLayout>
 </ContentPage>

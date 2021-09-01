@@ -13,10 +13,12 @@ namespace SmartCounter.Views
     public partial class Settings : ContentPage
     {     
         StackLayout stackLayout = new StackLayout();
+        Button SettingsButn = new Button();
         public Settings()
         {
             InitializeComponent();
             stackLayout = (StackLayout)FindByName("SoundCounterIsVisible");
+            SettingsButn = (Button)FindByName("SettingsBtn");
         }
 
         private void switch_Toggled(object sender, ToggledEventArgs e)
@@ -24,6 +26,7 @@ namespace SmartCounter.Views
             if(e.Value)
             {
                 stackLayout.IsVisible = true;
+                SettingsButn.IsVisible = true;
             }
             else
             {
@@ -32,6 +35,10 @@ namespace SmartCounter.Views
         }
         
         private void OnBackFromSettings_Click(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage(new MainPage());
+        }
+        private void OnBtnSaveSettings_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new NavigationPage(new MainPage());
         }
