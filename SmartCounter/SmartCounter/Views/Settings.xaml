@@ -12,7 +12,7 @@
             <Label Text="Sound" FontSize="25" TextColor="White"
                    Margin="15,50,0,0"
                    />
-            <Switch IsToggled="False" Margin="15,50,25,0" 
+            <Switch IsToggled="False" Margin="15,50,25,0" x:Name="SwitchSound"
                     HorizontalOptions="FillAndExpand" Toggled="switch_Toggled"
                     OnColor="Green"/>
         </StackLayout>
@@ -21,7 +21,7 @@
                      x:Name="SoundCounterIsVisible">
             <Label Text="After Every" TextColor="White" FontSize="25"
                Margin="15,50,0,0"/>
-            <Entry Keyboard="Numeric" BackgroundColor="White" 
+            <Entry Keyboard="Numeric" BackgroundColor="White" x:Name="EntryNumOfSoundClick"
                    HorizontalOptions="FillAndExpand" Margin="120,50,50,0" HorizontalTextAlignment="Center"
                    MaxLength="2"/>
         </StackLayout>
